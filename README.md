@@ -19,6 +19,7 @@ After 8 questions, the user will recieve a score based on their time left.<br>
 The user must enter their initials (no more than three characters), where their initials and score will be saved in a local storage.<br>
 If the user's score is higher than the old score, their score will be saved in a High Score section of the next page.<br>
 To help answer questions, the correct answers are provided in the console.<br>
+In the high scores page, the user can delete the old high score themselves or select a Back button to try the quiz again.<br>
 --#CREDITS--<br>
 Kyle Rather<br>
 
