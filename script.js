@@ -15,6 +15,7 @@ var submitInitials = document.querySelector("#submit");
 
 
     //Local Storage Function that is called when the user clicks Submit-----------------
+    //If the user obtains a new high score, it will be written on the next page---------
 initialsInput=document.querySelector("#initials");
 submitInitials.addEventListener("click", function(event) {
     event.preventDefault();
@@ -110,27 +111,8 @@ function startGame() {
         timer = setInterval(function() {
           timerCount--;
           timerElement.textContent = timerCount;
-          if (timerCount >= 0) {
-            if (questionCount == 0) {
-                // Clears interval
-                clearInterval(timer);
-                endGame();}
-            // Tests if win condition is met
-            if (timerCount === 0) {
-                if (questionCount == 0) {
-                    // Clears interval
-                    clearInterval(timer);
-                    endGame();}
-              // Clears interval and stops timer
-              clearInterval(timer);
-            }
-          }
           // Tests if time has run out
           if (timerCount <= 0) {
-            if (questionCount == 0) {
-                // Clears interval
-                clearInterval(timer);
-                endGame();}
             // Clears interval
             clearInterval(timer);
             endGame();
@@ -175,14 +157,20 @@ function startGame() {
         questionElement.textContent = questionCount;
         selectedAnswer=0
                 //Writes the next question and answers
-        document.getElementById('hiddenquestion').textContent=questions[questionNumber].title;
-        document.getElementById('answer0').textContent=questions[questionNumber].choices[0];
-        document.getElementById('answer1').textContent=questions[questionNumber].choices[1];
-        document.getElementById('answer2').textContent=questions[questionNumber].choices[2];
-        document.getElementById('answer3').textContent=questions[questionNumber].choices[3];
+                if (questionCount>=1){
+                    document.getElementById('hiddenquestion').textContent=questions[questionNumber].title;
+                    document.getElementById('answer0').textContent=questions[questionNumber].choices[0];
+                    document.getElementById('answer1').textContent=questions[questionNumber].choices[1];
+                    document.getElementById('answer2').textContent=questions[questionNumber].choices[2];
+                    document.getElementById('answer3').textContent=questions[questionNumber].choices[3];
+                }
         if (selectedAnswer!==questions[questionNumber-1].answerIndex){
             timerCount -= 15;
         }
+        if (questionCount == 0) {
+            // Clears interval
+            clearInterval(timer);
+            endGame();}
       }
      //============================================================================== 
 
@@ -196,15 +184,21 @@ function startGame() {
         questionElement.textContent = questionCount;
         selectedAnswer=1
                 //Writes the next question and answers
-            document.getElementById('hiddenquestion').textContent=questions[questionNumber].title;
-            document.getElementById('answer0').textContent=questions[questionNumber].choices[0];
-            document.getElementById('answer1').textContent=questions[questionNumber].choices[1];
-            document.getElementById('answer2').textContent=questions[questionNumber].choices[2];
-            document.getElementById('answer3').textContent=questions[questionNumber].choices[3];
+                if (questionCount>=1){
+                    document.getElementById('hiddenquestion').textContent=questions[questionNumber].title;
+                    document.getElementById('answer0').textContent=questions[questionNumber].choices[0];
+                    document.getElementById('answer1').textContent=questions[questionNumber].choices[1];
+                    document.getElementById('answer2').textContent=questions[questionNumber].choices[2];
+                    document.getElementById('answer3').textContent=questions[questionNumber].choices[3];
+                }
         //Reduces Timer when wrong answer is selected
         if (selectedAnswer!==questions[questionNumber-1].answerIndex){
             timerCount -= 15;
         }
+        if (questionCount == 0) {
+            // Clears interval
+            clearInterval(timer);
+            endGame();}
       }
      //==================================================================================
      
@@ -216,15 +210,21 @@ function startGame() {
             questionElement.textContent = questionCount;
             selectedAnswer=2
                     //Writes the next question and answers
-                document.getElementById('hiddenquestion').textContent=questions[questionNumber].title;
-                document.getElementById('answer0').textContent=questions[questionNumber].choices[0];
-                document.getElementById('answer1').textContent=questions[questionNumber].choices[1];
-                document.getElementById('answer2').textContent=questions[questionNumber].choices[2];
-                document.getElementById('answer3').textContent=questions[questionNumber].choices[3];
+                    if (questionCount>=1){
+                        document.getElementById('hiddenquestion').textContent=questions[questionNumber].title;
+                        document.getElementById('answer0').textContent=questions[questionNumber].choices[0];
+                        document.getElementById('answer1').textContent=questions[questionNumber].choices[1];
+                        document.getElementById('answer2').textContent=questions[questionNumber].choices[2];
+                        document.getElementById('answer3').textContent=questions[questionNumber].choices[3];
+                    }
             //Reduces Timer when wrong answer is selected
             if (selectedAnswer!==questions[questionNumber-1].answerIndex){
                 timerCount -= 15;
             }
+            if (questionCount == 0) {
+                // Clears interval
+                clearInterval(timer);
+                endGame();}
           }
     //==================================================================================   
 
@@ -237,15 +237,21 @@ function startGame() {
         questionElement.textContent = questionCount;
         selectedAnswer=3
                 //Writes the next question and answers
-            document.getElementById('hiddenquestion').textContent=questions[questionNumber].title;
-            document.getElementById('answer0').textContent=questions[questionNumber].choices[0];
-            document.getElementById('answer1').textContent=questions[questionNumber].choices[1];
-            document.getElementById('answer2').textContent=questions[questionNumber].choices[2];
-            document.getElementById('answer3').textContent=questions[questionNumber].choices[3];
+                if (questionCount>=1){
+                    document.getElementById('hiddenquestion').textContent=questions[questionNumber].title;
+                    document.getElementById('answer0').textContent=questions[questionNumber].choices[0];
+                    document.getElementById('answer1').textContent=questions[questionNumber].choices[1];
+                    document.getElementById('answer2').textContent=questions[questionNumber].choices[2];
+                    document.getElementById('answer3').textContent=questions[questionNumber].choices[3];
+                }
         //Reduces Timer when wrong answer is selected
         if (selectedAnswer!==questions[questionNumber-1].answerIndex){
             timerCount -= 15;
         }
+        if (questionCount == 0) {
+            // Clears interval
+            clearInterval(timer);
+            endGame();}
       }
      //==================================================================================   
 
