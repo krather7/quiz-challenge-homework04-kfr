@@ -20,9 +20,23 @@ submitInitials.addEventListener("click", function(event) {
     event.preventDefault();
     var initials = document.querySelector("#initials").value;
 
-    var scoringObject = {initials: initials, score: timerCount}
-    localStorage.setItem("scoringObject", JSON.stringify(scoringObject))
-
+    if (localStorage.getItem("scoringObject") === null) {
+        var scoringObject = {initials: initials, score: timerCount}
+        localStorage.setItem("scoringObject", JSON.stringify(scoringObject))
+    } else {
+    var jsonString = localStorage.getItem("scoringObject");
+    var retrievedObject = JSON.parse(jsonString);
+    console.log(retrievedObject)
+    oldHighScore=retrievedObject.score
+    console.log(oldHighScore)
+    if (timerCount>=oldHighScore){
+        console.log("Create a new high score")
+        var scoringObject = {initials: initials, score: timerCount}
+        localStorage.setItem("scoringObject", JSON.stringify(scoringObject))
+    } else {
+        console.log("Leave high score the same")
+    }
+}
     if (initials.length>=4 || initials == ""){
         console.log("Enter initials plzz!")
         alert("Initials must be three characters or less!")
@@ -52,7 +66,7 @@ var questions = [
     answerIndex: 0
     },
     {title: "Who was the avatar before Aang?",
-    choices: ["Kyosi", "Roku", "Korra", "Yangchen"],
+    choices: ["Kyoshi", "Roku", "Korra", "Yangchen"],
     answerIndex: 1
     },
     {title: "Bolin can use what specialty of Earth Bending?",
