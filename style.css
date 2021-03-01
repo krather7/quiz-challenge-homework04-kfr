@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    color: #fff;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  body {
+    font-family: Trebuchet;
+    margin: 0;
+    min-height: 100vh;
+    justify-content: space-evenly;
+    background: linear-gradient(0deg, rgba(19,41,61,1) 15%, rgb(109, 12, 3) 63%);
+  }
+
+  header {
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(19,41,61,1) 15%, rgb(109, 12, 3) 63%);
+    color: #fff;
+  }
+
+button {
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    width:50%;
+    padding: 20px 25px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+  }
+
+  .timer-text {
+    padding: 30px;
+    font-size: 1.5em;
+    text-align:center;
+  }
+
+  .timer {
+    height: 300px;
+
+  }
+
+  .card {
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  form {
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    padding: 20px;
+    color:blue;
+  }
+
+  #hiddenquestion {
+    display:none;
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
+    border-radius: 8px;
+    color: #fff;
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    font-size: 2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    padding: 20px 52px;
+    text-align: center;
+    transition-duration: 0.15s;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    margin-top: 0.6em;
+  }
+
+  #answer0 {
+    display: none;
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    width:20%;
+    font-size:1.5em;
+    padding: 25px;
+  }
+
+  #answer1 {
+    display: none;
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    width:20%;
+    font-size:1.5em;
+    padding: 25px;
+  }
+
+  #answer2 {
+    display: none;
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    width:20%;
+    font-size:1.5em;
+    padding: 25px;
+  }
+
+  #answer3 {
+    display: none;
+    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: auto;
+    width:20%;
+    font-size:1.5em;
+    padding: 25px;
+  }
+
+  .display {
+    background: radial-gradient(circle, rgb(156, 168, 238) 0%, rgba(109, 61, 61, 0.954) 100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    color: rgb(31, 31, 31);
+    font-size: 1.5em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px 52px;
+    text-align: left;
+    margin-top: 0.6em;
+  }
+
+  #hidden-form {
+      display: none;
+  }
+
+  #back {
+      display: block;
+  }
+
+  #quiz-title{
+      font-size:2em;
+  }
+
+  #hide-this{
+      display:none;
+  }
+
+  input{
+    color:black;
+  }

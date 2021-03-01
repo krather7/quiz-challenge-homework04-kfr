@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="style.css">
+    <head>
+        <title>Homework 04 Quiz</title>
+    </head>
+
+    <body>
+        <!--The header contains the title of the quiz. It also contains the start button that appears
+        when the user starts the page. The start button hides itself when the quiz begins. When the quiz
+        begins, the quiz questions will appear in this section.-->
+        <header>
+            <div id="quiz-title">Amazing Quiz Game! Avatar Fire Round!</div>
+            <button id="start-button">Start!</button>
+            <div id="hiddenquestion">Keep this question hidden</div>
+          </header>
+    
+        <main>
+        <!--This section displays the timer. It counts down from 80 seconds. There is also a countdown
+        for the number of questions that remain.-->
+            <div id="hide-this">
+            <div class="card timer">
+                <div class = "timer-text">
+                    <div class="timer-count">80</div>
+                             <p>seconds remaining</p>
+                    <div class="question-count">8</div>
+                            <p>questions remaining</p>
+                    </div>
+                </div>
+            </div>
+
+        <!--This section contains the four answer selections.  These will cycle through an object.-->
+            <button id="answer0">Keep this answer hidden</button>
+            <button id="answer1">Keep this answer hidden</button>
+            <button id="answer2">Keep this answer hidden</button>
+            <button id="answer3">Keep this answer hidden</button>
+
+        <!--This form appears when the endGame function is called. It contains a place for the user to enter
+        their name and save it. The submit button will redirect the user to the high scores page-->
+            <form id="hidden-form">
+                <input type="initials" name="initials" id="initials" placeholder="Enter Initials" />
+                <button id="submit">Submit</button>
+            </form>
+
+        
+        </main>
+       <script src="script.js"></script>
+    </body>
+</html>
