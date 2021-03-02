@@ -9,7 +9,7 @@ var answer03 = document.querySelector("#answer3");
 var submitInitials = document.querySelector("#submit");
     //==================================================================================
 
-    //Displays answers in console for those
+    //Displays answers in console for those that need it
     console.log("Answers: 1:Air Nomads||2:Roku||3:Lava Bending||4:Levitation||5:Blood Bending||6:Kuruk||7:Fire Nation Colonies||8:Raava")
     //==================================================================================
 
@@ -166,6 +166,7 @@ function startGame() {
                 }
         if (selectedAnswer!==questions[questionNumber-1].answerIndex){
             timerCount -= 15;
+            timerElement.textContent = timerCount;
         }
         if (questionCount == 0) {
             // Clears interval
@@ -194,6 +195,7 @@ function startGame() {
         //Reduces Timer when wrong answer is selected
         if (selectedAnswer!==questions[questionNumber-1].answerIndex){
             timerCount -= 15;
+            timerElement.textContent = timerCount;
         }
         if (questionCount == 0) {
             // Clears interval
@@ -220,6 +222,7 @@ function startGame() {
             //Reduces Timer when wrong answer is selected
             if (selectedAnswer!==questions[questionNumber-1].answerIndex){
                 timerCount -= 15;
+                timerElement.textContent = timerCount;
             }
             if (questionCount == 0) {
                 // Clears interval
@@ -247,6 +250,7 @@ function startGame() {
         //Reduces Timer when wrong answer is selected
         if (selectedAnswer!==questions[questionNumber-1].answerIndex){
             timerCount -= 15;
+            timerElement.textContent = timerCount;
         }
         if (questionCount == 0) {
             // Clears interval
