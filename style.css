@@ -92,46 +92,7 @@ button {
     margin-top: 0.6em;
   }
 
-  #answer0 {
-    display: none;
-    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
-    border: 1px solid #eceff1;
-    border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-    margin: auto;
-    width:20%;
-    font-size:1.5em;
-    padding: 25px;
-  }
-
-  #answer1 {
-    display: none;
-    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
-    border: 1px solid #eceff1;
-    border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-    margin: auto;
-    width:20%;
-    font-size:1.5em;
-    padding: 25px;
-  }
-
-  #answer2 {
-    display: none;
-    background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
-    border: 1px solid #eceff1;
-    border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-    margin: auto;
-    width:20%;
-    font-size:1.5em;
-    padding: 25px;
-  }
-
-  #answer3 {
+  .answer {
     display: none;
     background: radial-gradient(circle, rgb(26, 25, 25) 0%, rgba(58, 58, 58, 0.954) 100%);
     border: 1px solid #eceff1;
