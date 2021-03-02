@@ -113,24 +113,17 @@ function startGame() {
             hide.style.display = "none";
           //==================
         //Show Quiz
-        var show = document.getElementById("hide-this");
-            show.style.display="block";
-        show = document.getElementById("hiddenquestion");
-            show.style.display = "block";
-                 document.getElementById('hiddenquestion').textContent=questions[0].title;
-        show = document.getElementById("answer0");
-            show.style.display = "block";
-                 document.getElementById('answer0').textContent=questions[0].choices[0];
-        show = document.getElementById("answer1");
-            show.style.display = "block";
-                 document.getElementById('answer1').textContent=questions[0].choices[1];
-        show = document.getElementById("answer2");
-            show.style.display = "block";
-                document.getElementById('answer2').textContent=questions[0].choices[2];
-        show = document.getElementById("answer3");
-            show.style.display = "block";
-                 document.getElementById('answer3').textContent=questions[0].choices[3];
-
+        document.getElementById("hide-this").style.display="block";
+        document.getElementById("hiddenquestion").style.display = "block";
+        document.getElementById("answer0").style.display = "block";
+        document.getElementById("answer1").style.display = "block";
+        document.getElementById("answer2").style.display = "block";
+        document.getElementById("answer3").style.display = "block";
+        document.getElementById('hiddenquestion').textContent=questions[0].title;
+        document.getElementById('answer0').textContent=questions[0].choices[0];
+        document.getElementById('answer1').textContent=questions[0].choices[1];
+        document.getElementById('answer2').textContent=questions[0].choices[2];
+        document.getElementById('answer3').textContent=questions[0].choices[3];
       }
     //================================================================================
     //This function will which answer was selected and write the next question--------
