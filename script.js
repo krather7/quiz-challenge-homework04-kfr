@@ -22,29 +22,22 @@ var submitInitials = document.querySelector("#submit");
 initialsInput=document.querySelector("#initials");
 submitInitials.addEventListener("click", function(event) {
     event.preventDefault();
+    var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+    if(existingEntries == null) existingEntries = [];
     var initials = document.querySelector("#initials").value;
-    if (localStorage.getItem("scoringObject") === null) {
-        var scoringObject = {initials: initials, score: timerCount}
-        localStorage.setItem("scoringObject", JSON.stringify(scoringObject))
-    } else {
-    var jsonString = localStorage.getItem("scoringObject");
-    var retrievedObject = JSON.parse(jsonString);
-    console.log(retrievedObject)
-    oldHighScore=retrievedObject.score
-    console.log(oldHighScore)
-    if (timerCount>=oldHighScore){
-        console.log("Create a new high score")
-        var scoringObject = {initials: initials, score: timerCount}
-        localStorage.setItem("scoringObject", JSON.stringify(scoringObject))
-    } else {
-        console.log("Leave high score the same")
-    }
-}
+    var score=timerCount
+    var entry = {
+        "initials": initials,
+        "score": score
+    };
+    //Makes sure initials only have 3 characters or less
     if (initials.length>=4 || initials == ""){
-        console.log("Enter initials plzz!")
         alert("Initials must be three characters or less!")
         return
     } else {
+      localStorage.setItem("entry", JSON.stringify(entry));
+      existingEntries.push(entry);
+      localStorage.setItem("allEntries", JSON.stringify(existingEntries));
         window.location = 'highscore.html';
     }
   });
@@ -161,16 +154,11 @@ function startGame() {
      //End Game Function-------------------------------------------------------------
      //This will hide the quiz and leave behind the timer as well as revealing a form to enter initials
       function endGame() {
-        hiddenQuestion = document.getElementById("hiddenquestion");
-            hiddenQuestion.style.display = "none";
-         hiddenAnswers = document.getElementById("answer0");
-            hiddenAnswers.style.display = "none";
-        hiddenAnswersWrong = document.getElementById("answer1");
-            hiddenAnswersWrong.style.display = "none";
-        hiddenAnswersWrong = document.getElementById("answer2");
-            hiddenAnswersWrong.style.display = "none";
-         hiddenAnswersWrong = document.getElementById("answer3");
-            hiddenAnswersWrong.style.display = "none";
+        document.getElementById("hiddenquestion").style.display = "none";
+        document.getElementById("answer0").style.display = "none";
+        document.getElementById("answer1").style.display = "none";
+        document.getElementById("answer2").style.display = "none";
+        document.getElementById("answer3").style.display = "none";
         hidden = document.getElementById("hidden-form");
             hidden.style.display = "block";
       }

@@ -2,22 +2,22 @@ var back = document.querySelector("#back");
 var clear = document.querySelector("#clearButton");
 var userInitials = document.querySelector("#userinitials");
 var userScore = document.querySelector("#userscore");
+var newDiv = document.getElementById('scores');
 
 renderScores();
 
 function renderScores(){
-    var jsonString = localStorage.getItem("scoringObject");
-    var retrievedObject = JSON.parse(jsonString);
+    var jsonString = localStorage.getItem("allEntries");
+    var allEntries = JSON.parse(jsonString);
 
-document.getElementById('userinitials').innerHTML = retrievedObject.initials
-document.getElementById('userscore').innerHTML = retrievedObject.score
-
-initials=retrievedObject.initials;
-score=retrievedObject.score
-
-console.log(retrievedObject)
-
-
+if(allEntries !== null){
+for (i=0;i<allEntries.length;i++){
+    var newSpan = document.createElement('li');
+    newSpan.innerText = "Name: " +allEntries[i].initials +" || Score: "+ allEntries[i].score;
+    newSpan.id = "newli_" + i;
+    newSpan.className = "newli";
+    newDiv.appendChild(newSpan);
+    console.log(allEntries.length)}}
 }
 
 function goBack(event) {
@@ -27,10 +27,9 @@ function goBack(event) {
 
 function clearScores() {
     localStorage.clear();
-    initials="";
-    score="";
-    document.getElementById('userinitials').innerHTML = initials
-    document.getElementById('userscore').innerHTML = score
+        console.log("Hello!")
+        document.getElementById("scores").style.display = "none";
+
 }
 
 back.addEventListener("click", goBack);
