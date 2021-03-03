@@ -19,7 +19,7 @@ Website Link: https://krather7.github.io/quiz-challenge-homework04-kfr/<br>
 <li>After 8 questions, the user will recieve a score based on their time left.<br>
 <li>The user must enter their initials (no more than three characters), where their initials and score will be saved in a local storage.<br>
 <li>After clicking the submit button, the user will be taken to a high score page that displays recent scores.<br>
-<li>In the high scores page, the user can delete the old high score themselves or select a Back button to try the quiz again.<br>
+<li>In the high scores page, the user can delete the old high score themselves or select a Back button to try the quiz again.</li><br>
  <br>
 --#CREDITS--<br>
 Kyle Rather<br>
