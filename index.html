@@ -9,12 +9,20 @@
         when the user starts the page. The start button hides itself when the quiz begins. When the quiz
         begins, the quiz questions will appear in this section.-->
         <header>
-            <div id="quiz-title">Amazing Quiz Game! Avatar Fire Round!</div>
+            <div id="quiz-title"> Knowledge Quiz Game! Avatar Fire Round!</div>
             <button id="start-button">Start!</button>
             <div id="hiddenquestion">Keep this question hidden</div>
           </header>
     
         <main>
+
+                    <!--This section contains the four answer selections.  These will cycle through an object.-->
+        <section id=answerContainer>
+            <button id="answer0" class=answer>Keep this answer hidden</button>
+            <button id="answer1" class=answer>Keep this answer hidden</button>
+            <button id="answer2" class=answer>Keep this answer hidden</button>
+            <button id="answer3" class=answer>Keep this answer hidden</button>
+        </section>
         <!--This section displays the timer. It counts down from 80 seconds. There is also a countdown
         for the number of questions that remain.-->
             <div id="hide-this">
@@ -28,11 +36,7 @@
                 </div>
             </div>
 
-        <!--This section contains the four answer selections.  These will cycle through an object.-->
-            <button id="answer0" class=answer>Keep this answer hidden</button>
-            <button id="answer1" class=answer>Keep this answer hidden</button>
-            <button id="answer2" class=answer>Keep this answer hidden</button>
-            <button id="answer3" class=answer>Keep this answer hidden</button>
+
 
         <!--This form appears when the endGame function is called. It contains a place for the user to enter
         their name and save it. The submit button will redirect the user to the high scores page-->

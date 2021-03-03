@@ -159,8 +159,9 @@ function startGame() {
         document.getElementById("answer1").style.display = "none";
         document.getElementById("answer2").style.display = "none";
         document.getElementById("answer3").style.display = "none";
+        document.getElementById("hide-this").style.display="none";
         hidden = document.getElementById("hidden-form");
-            hidden.style.display = "block";
+        hidden.style.display = "block";
       }
     //====================================================================================
     //Event Listeners---------------------------------------------------------------------
