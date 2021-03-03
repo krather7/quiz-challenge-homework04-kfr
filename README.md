@@ -25,3 +25,6 @@ In the high scores page, the user can delete the old high score themselves or se
 Kyle Rather<br>
 <br>
  --#SCREENSHOT--<br>
+![alt tag](https://github.com/krather7/quiz-challenge-homework04-kfr/blob/main/StartScreen.pdf)<br>
+![alt tag](https://github.com/krather7/quiz-challenge-homework04-kfr/blob/main/QuizScreen.pdf)<br>
+![alt tag](https://github.com/krather7/quiz-challenge-homework04-kfr/blob/main/ScoresScreen.pdf)<br>
